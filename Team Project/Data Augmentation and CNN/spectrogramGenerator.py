@@ -27,15 +27,14 @@ def generate_mel_spectrograms(folder_path, output_folder, target_sr=22050, n_fft
         log_S = (log_S - dB_min) / (dB_max - dB_min)
         log_S = np.clip(log_S, 0, 1)
 
-        # Plot the spectrogram
+        # Plot the spectrogram without axis, titles, or color bars
         plt.figure(figsize=(10, 4))
         librosa.display.specshow(data=log_S, sr=sr, hop_length=hop_length, x_axis='time', y_axis='mel')
-        plt.colorbar(format='%+0.2f dB')
-        plt.title(f'Mel Spectrogram of {wav_file}')
-        plt.tight_layout()
+
+        # Remove the colorbar, axis labels, and title
+        plt.axis('off')
 
         # Save the figure without axis for CNN
-        plt.axis('off')
         plt.savefig(os.path.join(output_dir, os.path.splitext(wav_file)[0] + '.png'), bbox_inches='tight', pad_inches=0)
         plt.close()
 
