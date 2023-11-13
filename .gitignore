@@ -1,3 +1,10 @@
 
 *.png
 *.wav
+*.h5
+Team Project/Data Augmentation and CNN/test.py
+Team Project/Data Augmentation and CNN/__pycache__/spectrogramGenerator.cpython-311.pyc
+Team Project/Data Augmentation and CNN/acdll.mp3
+Team Project/Data Augmentation and CNN/music_score.mid
+Team Project/Data Augmentation and CNN/spectogramDatabase/0-a.mat
+Team Project/Data Augmentation and CNN.zip
